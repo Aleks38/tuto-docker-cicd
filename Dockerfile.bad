@@ -1,0 +1,8 @@
+# Dockerfile.good.bad
+FROM node:latest
+
+WORKDIR /app
+
+RUN touch /app/secret.txt
+
+CMD ["node", "-e", "console.log('Je suis root ! Danger !'); setInterval(() => {}, 1000);"]
